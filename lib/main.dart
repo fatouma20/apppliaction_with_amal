@@ -1,20 +1,25 @@
-// ignore_for_file: prefer_const_constructors
-
+import 'package:apppliaction_with_amal/welcom.dart';
 import 'package:flutter/material.dart';
+import 'Home.dart';
+import 'login.dart';
+//import 'Home.dart';
+//import 'dart:typed_data';
+//import 'welcom.dart';
+//import 'Company.dart';
+//import 'Create.dart';
+void main() => runApp(const App());
 
-void main() {
-  runApp(const MyApp());
-}
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
-  // ignore: prefer_const_constructors
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: SplashScreen(),
-
-        };}}
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+    initialRoute: '/',
+    //routes: {
+   //: (context) => const Login(),
+    //'/second': (context) => const Home(),},
+    home: welcom(),  );
+  }
+}
