@@ -18,8 +18,11 @@ class welcomState extends State<welcom>{
   }
  Widget initWiddget(){
     return Scaffold(
+
      body:Stack(
         children:[
+
+
           Container(
             height: double.infinity,
             width : double.infinity,
@@ -36,7 +39,6 @@ class welcomState extends State<welcom>{
 
              children:  <Widget>[
                Center(
-
                    child:  CircularPercentIndicator(
                    animation: true,
                      radius:200,
@@ -48,25 +50,27 @@ class welcomState extends State<welcom>{
                    center: const Text('40%',style: TextStyle(fontSize: 40,color: Colors.white),),
                  ),
                ),
-               const Text(
-             'DevWork',
-             style:TextStyle(
-             color: Colors.white54,
-             fontSize: 40,
-           fontWeight: FontWeight.bold,
-      ),
+            Center(
+                   child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.purpleAccent,
+                        onPrimary: Colors.white,
+       ),
+   child: const Text('Dev-Work'),
+   onPressed: () {
+   Navigator.pushNamed(context, '/second');}
+
     ),
 
-             ],
+    ),
+    ],
 
           ),
 
    ),
 
-   ],
-   ),
-
-    );
+ ],
+     ),  );
 
  }
 }

@@ -63,59 +63,58 @@ class CreateState extends State<Create>{
     );
   }
   Widget date_of_birth(){
-
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget> [
-        const Text(
-          'date_of_bith',
-          style: TextStyle(
-              color: Colors.white70,
-              fontSize:40,
-              fontWeight: FontWeight.bold
-          ),
-        ),
+        TextButton(onPressed:(){
+          showDatePicker(
+              context: context,
+              initialDate: DateTime.now(),
+              firstDate: DateTime(1980),
+              lastDate: DateTime(2011));},
+            child:const Text(
+              'Date of Birth',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+    ), ),  ),
 
         Container(
           alignment: Alignment.centerLeft,
           decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(100),
-
               boxShadow: const [
                 BoxShadow(
                     color: Colors.black,
                     blurRadius: 6,
                     offset: Offset(0, 2)
-                )
-              ]
+                ),],),
 
+        height: 60,
+    child: TextFormField(
+
+          keyboardType:TextInputType.text,
+          style: const TextStyle(
+              color: Colors.black
+          ),
+          decoration:  const InputDecoration(
+              border: InputBorder.none,
+
+              prefixIcon: Icon(
+                Icons.date_range_outlined,
+                color: Color(0xffb784a7),
+              ),
+              hintText: 'date of Birth',
+              hintStyle: TextStyle(
+                  color: Colors.black38
+              )
 
           ),
-          height: 60,
-          child: TextFormField(
-            obscureText: true,
-            style: const TextStyle(
-                color: Colors.black
-            ),
-            decoration: const InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.only(top: 14),
-                prefixIcon: Icon(
-                  Icons.date_range_outlined,
-                  color: Color(0xffb784a7),
-                ),
-                hintText:'date of birth',
-                hintStyle: TextStyle(
-                    color: Colors.black38
-                )
+        ),
+        ),],
 
-            ),
-          ),
-        )
-
-      ],
     );
   }
   Widget contact(){
@@ -151,7 +150,7 @@ class CreateState extends State<Create>{
           ),
           height: 60,
           child: TextFormField(
-            obscureText: true,
+
             style: const TextStyle(
                 color: Colors.black
             ),

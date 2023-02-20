@@ -143,11 +143,10 @@ class HomeState extends State<Home>{
                     offset: Offset(0, 2)
                 )
               ]
+    ),
 
 
-          ),
           height: 60,
-
 
           child:TextFormField(
             keyboardType:TextInputType.text,
@@ -173,29 +172,18 @@ class HomeState extends State<Home>{
       ],
     );
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   Widget buildRechercheBtn(){
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 20),
       width : 150,
       height: 100,
-      child:
+    child:
 
       ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pop();
+
+        },
         style: ElevatedButton.styleFrom(
           primary: Colors.blueGrey,
           onPrimary: Colors.white,
@@ -209,14 +197,8 @@ class HomeState extends State<Home>{
             fontWeight: FontWeight.bold,
           )
           ,),
-
-
       ),
-
-
     );
-
-
   }
   @override
   Widget build(BuildContext context){

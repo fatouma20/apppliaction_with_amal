@@ -191,7 +191,7 @@ height: 100,
 child: ElevatedButton(
 onPressed:() {
 print("Login Pressed");
-Navigator.pushNamed(context, '/second');
+Navigator.pushNamed(context, '/home');
 },
 style: ElevatedButton.styleFrom(
 primary: Colors.blueGrey,
